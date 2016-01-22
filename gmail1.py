@@ -33,6 +33,10 @@ subjectElem.send_keys(subjectLine)
 print('What is going to be written in the body?')
 bodyLine = input()
 
-sendtoElem = browser.find_element_by_id('rtetext')
-sendtoElem.send_keys (bodyLine)
+bodyElem = browser.find_element_by_id('rtetext')
+bodyElem.send_keys (bodyLine)
 
+time.sleep(3)
+
+sendElem = browser.find_element_by_link_text('Send')
+sendElem.click()
